@@ -14,11 +14,6 @@ parameters:
       - custom_constraint: nova.keypair
     default: kriyayoga
 
-#  public_key:
-#    type: string
-#    description: Public SSH key that will be injected on compute instances
-#    default: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDP5u2F9w/zmOjPukfPMe4ViucW7qTHBjIE+IcNJSb8Du3+OBQyDwCG/yOug/tMFcoeFlxBpe5SPuLl2diqflGwDwnmXfuagcaNmro9mN0phO37X2scKA2zOfrB6LKfvM9MdVr0c4gN9ltGn2iwwT7FViUom68vhVUkVYLNTA1LNhbj2335q5ND+3sPbDY5YpM+Md9VmCqJE7Oj/DphiVGGLAjkRcJwYrOVXkYwduWiWS3scMfuYWq29qrvXVAtt4AIBulbw/r3qoneIcxpkil/xBmB3wVr9DE/VW8osz3O5hDrmE7q9O6In3kLVJ19QXKvFD0yMuuYE8n351ndWwnmDSNNDiaq4RkMwK7A0FIqTa1XqAIO0FQ2W3tN52OrOY/ym09JTWF/VIBbd64cicx2A2IXZxV4xTbruSrUF31Ksi4eaT92Vo1wxSX1wLFym1HXVlimWwFnMuikR0RCQaqMJUDycQKT8FfiqcxKB5cT2PQbz2TAnz79tBJukPiA/gKfTZkPL9qH9UP6SOhHwvyp/IEHBoIrmideC4IRerVB2dgeSnze9OtKp7ssuOUMsjsyQmvZ0Us9Kj9UyiW8iIekUhG/tE8d1dPK2yG/44NvDWJ5JzJKBxLWBCa+9+05zRluzFf5mesw8DOuaRlQUQzmTW5laegDCifIyA1Ng9hZxw== admin@kriya.org.nz
-
   web_servers_flavor:
     type: string
     description: Flavour for the web servers
@@ -85,12 +80,6 @@ parameters:
 
 
 resources:
-#  authorised_key:
-#    type: OS::Nova::KeyPair
-#    properties:
-#      name: { get_param: key_name }
-#      public_key: { get_param: public_key }
-
   private_net:
     type: OS::Neutron::Net
     properties:
