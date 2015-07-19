@@ -1,0 +1,24 @@
+.item-list .pager {
+  font-size: 0.75em;
+}
+.item-list .pager li {
+  padding: 0;
+  margin: 0;
+}
+.item-list .pager a, .item-list .pager li.pager-current {
+  display: inline-block;
+  padding: 0;
+}
+.item-list .pager li.pager-item a, .item-list .pager li.pager-current {
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+}
+.item-list .pager .pager-first a, .item-list .pager .pager-previous a, .item-list .pager .pager-next a, .item-list .pager .pager-last a {
+  display: inline-block; display: none;
+}

@@ -1,0 +1,102 @@
+  .region-wrapper, #block-with-full-bg-wrapper .block-wrapper, #banner-area .block-nivo-slider .block-wrapper {
+    max-width: 1040px;
+  }
+  .region-wrapper .region-wrapper-inner, #block-with-full-bg-wrapper .block-wrapper-inner, #banner-area .block-nivo-slider .block-wrapper-inner {
+    padding: 0;
+  }
+
+  .thumb-slideshow-banner .views-slideshow-controls-bottom {
+    display: block;
+  }
+
+  #top-bar-left, #content,
+  #sidebar-first, #sidebar-second,
+  .footer-columns-region, #footer-left {
+    display: inline;
+    float: left; /* LTR */
+  }
+  #top-bar-right, #footer-right {
+    display: inline;
+    float: right; /* LTR */
+  }
+
+  .two-sidebars #content {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+  }
+  .one-sidebar #content {
+    width: 75%;
+  }
+  .no-sidebars #content {
+    width: 100%;
+  }
+  .sidebar-first #content {
+    margin-left: 25%;
+    margin-right: 0;
+  }
+  .sidebar-second #content {
+    margin-right: 25%;
+    margin-left: 0;
+  }
+  #sidebar-first {
+    width: 25%;
+    margin-left: -100%;
+  }
+  #sidebar-second {
+    width: 25%;
+    margin-left: -25%;
+    clear: none;
+  }
+  .footer-columns-region {
+    width: 25%;
+  }
+  .top-bar-region,
+  .footer-region {
+    width: 50%;
+  }
+  #top-bar-left .block, #top-bar-left ul, #footer-left .block, #footer-left ul {
+    text-align: left;
+  }
+  #top-bar-left .block, #footer-left .block {
+    float: left;
+    margin-right: 15px;
+  }
+  #top-bar-right .block, #top-bar-right ul, #footer-right .block, #footer-right ul {
+    text-align: right;
+  }
+  #top-bar-right .block, #footer-right .block {
+    float: right;
+    margin-left: 15px;
+  }
+
+  /*-- both sidebar right ---*/
+  .both-sidebar-right.sidebar-first #content {
+    margin-left: 0;
+    margin-right: 25%;
+  }
+  .both-sidebar-right.sidebar-first #sidebar-first {
+    margin-left: -25%;
+  }
+  .both-sidebar-right.two-sidebars #content {
+    margin-left: 0;
+    margin-right: 50%;
+  }
+  .both-sidebar-right.two-sidebars #sidebar-first {
+    margin-left: -50%;
+  }
+  /* --- both sidebar left ---*/
+  .both-sidebar-left.sidebar-second #content {
+    margin-right: 0;
+    margin-left: 25%;
+  }
+  .both-sidebar-left.sidebar-second #sidebar-second {
+    margin-left: -100%;
+  }
+  .both-sidebar-left.two-sidebars #content {
+    margin-left: 50%;
+    margin-right: 0;
+  }
+  .both-sidebar-left.two-sidebars #sidebar-second {
+    margin-left: -75%;
+  }

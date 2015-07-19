@@ -1,0 +1,44 @@
+#top-bar .region p, #top-bar .region ul, #top-bar .region ul li, #top-bar .region ul li a, #top-bar .region table, #top-bar .region table td {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: none;
+  clear: none;
+  line-height: 1em;
+}
+#top-bar .region table {
+  display: inline;
+}
+#top-bar .region .block {
+  font-size: 12px;
+  padding: 13px 0;
+}
+#top-bar .region ul li {
+  display: inline;
+}
+#top-bar .region ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+}
+#top-bar .region ul.menu li a {
+  border-left: 1px solid #fff;
+}
+#top-bar .region table td {
+  padding: 0 10px;
+}
+#top-bar .region ul li.first a, #top-bar .region ul li:first-child a {
+  padding-left: 0;
+  border-left: none;
+}
+#top-bar .region ul li.last a, #top-bar .region ul li:last-child a {
+  padding-right: 0;
+  border-right: none;
+}
+#top-bar .region .block-locale ul li {
+  padding: 0 0.5em;
+}
+/* --- centering all the block for mobile ---- */
+#top-bar .block, #top-bar ul {
+  text-align: center;
+}

@@ -1,0 +1,116 @@
+/* ---------- Basic Layout Styles ----------- */
+
+html,
+body,
+#page  {
+  height: 100%;
+}
+#page-wrapper {
+  min-height: 100%;
+  background: #fff;
+}
+body.layout-boxed #page-wrapper {
+  -webkit-box-shadow:  0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow:  0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  max-width: 1060px;
+  margin: 0px auto;
+}
+
+/*--- layout padding ---- */
+.region-wrapper, #block-with-full-bg-wrapper .block-wrapper, #banner-area .block-nivo-slider .block-wrapper {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.region-wrapper .region-wrapper-inner, #block-with-full-bg-wrapper .block-wrapper-inner, #banner-area .block-nivo-slider .block-wrapper-inner {
+  padding: 0 10px;
+}
+.region-wrapper .region-padding, #block-with-full-bg-wrapper .block-padding, #banner-area .block-nivo-slider .block-padding {
+  padding: 0 15px;
+}
+/*--- end layout padding ---- */
+
+#header {
+  width: 100%;
+  height: 110px;
+  position: relative;
+  z-index: 500;
+}
+.region-header {
+  margin: 0;
+  float: right;
+  clear: none;
+}
+#navigation {
+  float: right;
+  clear: none;
+  display: block;
+  position: relative;
+}
+
+#banner-area {
+  width: 100%;
+}
+#page-title-wrapper {
+  width: 100%;
+  padding-top: 80px;
+  overflow: hidden;
+}
+#page-title-wrapper .region-wrapper-inner {
+  position: relative;
+}
+#main-wrapper {
+  min-height: 300px;
+}
+#main {
+  margin-top: 50px;
+}
+#top-bar-left, #top-bar-right, #content,
+#sidebar-first, #sidebar-second,
+.footer-columns-region, #footer-left, #footer-right {
+  position: relative;
+}
+
+.sidebar .block {
+  margin: 0 0 70px 0;
+}
+#featured {
+  padding: 50px 0;
+  margin: 0 0 70px 0;
+}
+#highlighted .block {
+  margin-bottom: 70px;
+}
+#highlighted .block .block-inner {
+  padding: 25px;
+}
+.region-content .block, #block-with-full-bg-wrapper .block, #postscript-bottom .block {
+  margin: 0 0 70px 0;
+  float: left;
+  width: 100%;
+}
+
+#footer-columns-wrapper {
+  padding: 30px 0;
+}
+#footer-columns .block {
+  margin: 20px 0;
+}
+#footer-wrapper {
+  padding: 15px 0;
+  min-height: 70px;
+  overflow: hidden;
+}
+
+.row {
+  clear: both;
+  width: 100%;
+  margin-bottom: 70px;
+}
+.row:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -1,0 +1,99 @@
+
+#page .jcarousel-container-horizontal {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+#page .jcarousel-clip-horizontal {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: auto;
+}
+#page .jcarousel-clip-horizontal img {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+}
+#page .jcarousel-item-horizontal {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display:inline;
+  border: none;
+  height: auto;
+}
+#page .jcarousel-item-horizontal .jcarousel-item-inner {
+  padding: 0 10px;
+  display: block;
+}
+#page .grid1 .jcarousel-item-horizontal .jcarousel-item-inner, #page .no-margin .jcarousel-item-horizontal .jcarousel-item-inner {
+  padding: 0 !important;
+}
+
+/* ---- bg --- */
+.greybg .jcarousel-item-horizontal .jcarousel-item-inner {
+  background-color: #f4f4f4;
+}
+
+
+/**
+ * Horizontal Buttons
+ */
+#page .jcarousel-next-horizontal,
+#page .jcarousel-prev-horizontal {
+  z-index: 100;
+  display: none;
+  width: 35px;
+  height: 46px;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#page .jcarousel-container-horizontal:hover .jcarousel-next-horizontal,
+#page .jcarousel-container-horizontal:hover .jcarousel-prev-horizontal {
+  display: block;
+}
+#page .jcarousel-next-horizontal {
+  background-image: url("../../images/next_btn.png");
+  right: 0px;
+  top: 50%;
+  margin-top: -23px;
+}
+#page .jcarousel-prev-horizontal {
+  background-image: url("../../images/previous_btn.png");
+  left: 0px;
+  top: 50%;
+  margin-top: -23px;
+}
+#page .jcarousel-prev-horizontal:hover, #page .jcarousel-prev-horizontal:active,
+#page .jcarousel-next-horizontal:hover, #page .jcarousel-next-horizontal:active {
+  background-position: center center;
+}
+
+
+/* --- brand jcourcel ---*/
+.view-id-brands .jcarousel-item-horizontal {
+  position: relative;
+}
+.view-id-brands .jcarousel-item-inner {
+  height: 80px;
+  display: block;
+  vertical-align: middle;
+  border: 1px solid #eee;
+  text-align: center !important;
+}
+.view-id-brands .jcarousel-item-inner a {
+  height: 80px;
+  display: block;
+  text-align: center !important;
+  width: 100%;
+  line-height: 80px;
+}
+.view-id-brands .jcarousel-item-inner img {
+  vertical-align: middle;
+  display: inline !important;
+}
+

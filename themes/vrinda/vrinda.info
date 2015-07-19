@@ -1,0 +1,53 @@
+name = vrinda
+description = A flexible recolorable theme with many regions.
+core = 7.x
+engine = phptemplate
+screenshot = screenshot.png
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/typography.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/content-elements.css
+stylesheets[all][] = css/mediaqueries.css
+stylesheets[all][] = css/colors.css
+stylesheets[print][] = css/print.css
+
+scripts[] = js/uniform.js
+scripts[] = js/superfish.js
+scripts[] = js/mobilemenu.js
+scripts[] = js/EqualHeightsInRows.js
+scripts[] = js/retina.js
+scripts[] = js/initialize.js
+
+
+regions[top_bar_left] = Top bar left
+regions[top_bar_right] = Top bar right
+regions[header] = Header
+regions[banner_area] = Banner area
+regions[featured] = Featured
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[block_with_full_bg_wrapper] = Block with full bg wrapper
+regions[postscript_bottom] = Postscript bottom
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourcolumn] = Footer four column
+regions[footer_left] = Footer left
+regions[footer_right] = Footer right
+
+
+settings[layout-style-type]= 'Wide'
+settings[body-background-color]= '#dddddd'
+settings[body-background-patterns-list]= '1'
+settings[sidebar-style-type]= 'layout1'
+settings[breadcrumb-display]= 1
+settings[breadcrumb-separator]= '»'
+settings[breadcrumb-title]= '1'
+settings[breadcrumb-title-length]= '50'
+settings[base-font-type]= 'default'
+settings[base-font-type-heading]= 'default'

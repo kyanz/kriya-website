@@ -1,0 +1,64 @@
+/* ---- vertical tabs elements ----- */
+.vertical-tabs .form-type-textfield input {
+  width: auto;
+}
+* html .vertical-tabs .form-type-textfield,
+* html .vertical-tabs .form-textarea-wrapper {
+  width: auto; /* IE6 */
+}
+
+.form-type-radios .form-item-sidebar-style-type {
+  float: left;
+  width: 200px;
+  margin-right: 20px !important;
+}
+.layout-example {
+  width: 120px;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+.layout-example .sidebar-first {
+  float: left;
+  width: 25px;
+  height: 100px;
+  background: #ddd;
+}
+.layout-example .content-region {
+  float: left;
+  width: 70px;
+  height: 100px;
+  background: #eee;
+  text-align: center;
+}
+.layout-example .sidebar-second {
+  float: left;
+  width: 25px;
+  height: 100px;
+  background: #ccc;
+}
+.body-background-color-palette {
+  height: 200px;
+  clear: both;
+}
+.body-background-color-palette .form-item-body-background-color {
+  width: 150px;
+  float: left;
+}
+.body-background-color-palette #colorpicker {
+  float: left;
+}
+.form-item-body-background-patterns-list {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+.form-item-body-background-patterns-list label {
+  display: block;
+}
+.form-item-body-background-patterns-list img {
+  vertical-align: middle;
+  padding: 1px;
+  border: 1px solid #ddd;
+  max-width: 40px;
+  height: auto;
+}

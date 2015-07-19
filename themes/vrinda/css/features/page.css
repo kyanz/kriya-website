@@ -1,0 +1,494 @@
+
+/* ----------------- Content ------------------ */
+
+.node-teaser.sticky {
+  background: #f9f9f9;
+  background: rgba(0, 0, 0, 0.024);
+  border: 1px solid #d3d7d9;
+  padding: 0 15px 15px;
+}
+.node-teaser .content {
+  clear: none;
+}
+.field-type-taxonomy-term-reference, .field-type-link-field {
+  margin: 0 0 1em !important;
+}
+.field-type-taxonomy-term-reference .field-label {
+  margin: 0;
+  padding-right: 10px; /* LTR */
+}
+.field-type-taxonomy-term-reference .field-label,
+.field-type-taxonomy-term-reference ul.links {
+  font-size: 0.9em;
+  line-height: 1em;
+}
+.field-type-taxonomy-term-reference ul.links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.field-type-taxonomy-term-reference ul.links li {
+  float: left; /* LTR */
+  padding: 0 1em 0 0; /* LTR */
+  white-space: nowrap;
+}
+.field-type-taxonomy-term-reference ul.links li a {
+  background: url('../../images/icons/tag.png') no-repeat left center;
+  padding-left: 16px;
+}
+.node-full .field-type-image .field-item, .node-teaser .field-type-image .field-item {
+  margin-bottom: 1em;
+}
+footer.link-wrapper {
+  padding: 0;
+  margin: 10px 0 50px 0;
+}
+footer.link-wrapper .meta {
+  display: inline;
+}
+.unpublished {
+  margin: -20px -15px 0;
+  padding: 20px 15px 0;
+}
+.unpublished .comment-text .comment-arrow {
+  border-left: 1px solid #fff4f4;
+  border-right: 1px solid #fff4f4;
+}
+.submitted-detail {
+  padding: 6px 0;
+}
+footer.link-wrapper ul.links, .comment-footer nav ul.links {
+  padding: 0;
+  margin: 0;
+}
+footer.link-wrapper ul.links li {
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+footer.link-wrapper ul.links li a {
+  display: inline-block;
+}
+footer.link-wrapper .node-readmore a {
+  padding: 5px 20px;
+  font-size: 0.9em;
+  text-transform: capitalize;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+footer.link-wrapper .node-readmore a:after {
+  content: " →";
+}
+.node-blog img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: -webkit-transform 1.4s ease;
+  -moz-transition: -moz-transform 1.4s ease;
+  -o-transition: -o-transform 1.4s ease;
+  transition: transform 1.4s ease;
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  -o-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+.node-blog:hover img {
+  -webkit-transform: scale(1.01) rotate(0.09deg);
+  -moz-transform: scale(1.01) rotate(0.09deg);
+  -ms-transform: scale(1.01) rotate(0.09deg);
+  -o-transform: scale(1.01) rotate(0.09deg);
+  transform: scale(1.01) rotate(0.09deg);
+}
+
+/* -------------- User Profile   -------------- */
+
+.profile .user-picture {
+  float: left;
+  width: 150px;
+  margin-right: 40px;
+}
+.profile h3 {
+  border: none;
+}
+
+
+/* -------------- Password Meter  ------------- */
+
+.confirm-parent,
+.password-parent {
+  width: 34em;
+}
+.password-parent,
+div.form-item div.password-suggestions {
+  position: relative;
+}
+.password-strength-text,
+.password-strength-title,
+div.password-confirm {
+  font-size: 0.82em;
+}
+.password-strength-text {
+  margin-top: 0.2em;
+}
+div.password-confirm {
+  margin-top: 2.2em;
+  width: 20.73em;
+}
+
+
+#main .feed-icon {
+  margin: 0 0 15px 0;
+}
+/*  ----- toolbar removed on lightbox2 display ------ */
+body.page-node-lightbox2 #toolbar {
+  display: none;
+}
+
+
+
+/* ---- page not found ---- */
+body.page-d #logo {
+  text-align: center;
+  float: none;
+}
+body.page-d #page-title-wrapper h1.title {
+  text-align: center !important;
+}
+#page-not-found {
+  text-align: center;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-top: 20px;
+  min-height: 350px;
+}
+.page-not-found-title, .accessdenied-title {
+  font-size: 9em;
+  margin: 0 0 10px 0;
+  line-height: 1em;
+}
+#accessdenied {
+  margin-top: 20px;
+  min-height: 450px;
+}
+.accessdenied-message {
+  text-align: center;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-top: 60px;
+}
+
+
+/* ---- team member page ---- */
+#block-views-team-member-block h2.block-title {
+  text-align: center;
+}
+.meet-our-team  .views-field-field-photo {
+  margin-bottom: 1em;
+}
+.meet-our-team .views-field-body {
+  margin-top: 10px;
+}
+.meet-our-team .views-field-field-designation {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.node-team-member h2 {
+  margin: 0;
+}
+.node-team-member .field-name-field-designation {
+  margin-bottom: 5px;
+}
+.node-team-member .follow-links {
+  margin-bottom: 1em;
+}
+
+
+/*------- Action links ------- */
+nav.action-links-wrapper {}
+ul.action-links {
+  margin: 20px 10px 0;
+  padding: 0;
+  list-style: none;
+}
+ul.action-links li {
+  margin-bottom: 5px;
+  display: block;
+  float: left;
+}
+ul.action-links li a {
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  display: block;
+  float: left;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 2em;
+  margin: 0 10px 0 0;
+  padding: 0 10px;
+  text-shadow: 0 1px 1px #fff;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -moz-transition: background 0.2s ease-in;
+  -webkit-transition: background 0.2s ease-in;
+	-o-transition: background 0.2s ease-in;
+	-ms-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+ul.action-links li a:before {
+  content: "+ ";
+}
+ul.action-links li a:hover,
+ul.action-links li a:focus {
+  background: #ddd;
+  color: #666;
+  text-decoration: none;
+  border-bottom-color: #ccc;
+}
+
+/* --- flickr steam ----*/
+ul.flickr_wrapper li.flickr_item {
+  width: 25%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+li.flickr_item img {
+  width: 96%;
+  height: auto;
+  padding-bottom: 3px;
+}
+
+
+/* ---- testimonials page ----*/
+#block-views-testimonial-block {
+  background-color: #333;
+  background-image: url('../../images/testimonial-bg.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 70px 0;
+}
+#block-views-testimonial-block h2.block-title {
+  color: #fff;
+}
+.testimonials {
+  text-align: center;
+  position: relative;
+  background-color: #efefef;
+  padding: 40px 20px 20px 20px;
+  margin-top: 60px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.testimonial-quote p:before {
+  color: #bbb;
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -.4em;
+}
+.testimonial-quote p:after {
+  color: #bbb;
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -.45em;
+}
+.testimonial-quote p:last-child {
+  margin-bottom: 0;
+}
+.testimonials .testimonial-authors {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.testimonial-pic {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.testimonial-pic img {
+  width: 60px;
+  height: auto;
+  display: inline;
+  border: 2px solid #fff;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transition: background 0.2s ease-in;
+  -webkit-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+
+
+/* --- faq support block ---*/
+#block-block-5 {
+  background-image: url('../../images/overlay.png');
+  background-position: center bottom;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding: 70px 0;
+}
+
+
+/* ---- add / edit node link --- */
+.views-field-edit-node a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 0.8em;
+  padding: 2px 5px;
+}
+.add-node-link {
+  font-size: .9em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+}
+.views-field-edit-node a, .add-node-link {
+  background: red;
+  color: #fff;
+  border: 1px dotted #000;
+}
+
+
+/*---- inner page banner -----*/
+.page-banner {
+  text-align: center;
+}
+.page-banner-wrap {
+  position: relative;
+}
+.page-banner .page-banner-img img {
+  width: 100%;
+  height: auto;
+}
+.page-banner .page-banner-text {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+/* --- contact info ---*/
+.address:before, .phone:before, .e-mail:before {
+  position: relative;
+  font-family: 'FontAwesome';
+  margin-right: 5px;
+  font-style: normal;
+}
+.address:before {
+  content: "";
+}
+.phone:before {
+  content: "";
+}
+.e-mail:before {
+  content: "";
+}
+
+/* --- photo gallery --- */
+.photo-gallery .views-row {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.photo-gallery .views-row-last {
+  margin-bottom: 0;
+}
+
+/* --- photo grid ---*/
+.photo-grid {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.photo-grid ul, .photo-grid ul li {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   list-style-image: none;
+}
+.photo-grid ul li {
+  width: 25%;
+  float: left;
+}
+.photo-grid ul li a {
+  display: block;
+  margin: 1px !important;
+}
+
+/* ----- contact us page ----- */
+#webform-client-form-3 {
+  margin: 0 auto;
+  width: 70%;
+}
+#webform-client-form-3 .form-text, #webform-client-form-3 .form-textarea {
+  width: 100%;
+}
+#webform-client-form-3 .form-submit {
+  width: 100%;
+}
+
+/* --- location map ---*/
+#highlighted .block-locationmap .block-inner {
+  padding: 0 !important;
+  text-align: center;
+  background-color: #f0ede5 !important;
+}
+
+
+/* ---- back to top ---*/
+#backtotop {
+  bottom: 0px;
+  z-index: 100000;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 50px;
+  height: 40px;
+  background-image: url('../images/up-aero.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #828282;
+  -webkit-box-shadow: 0 0px 1px 0 rgba(255, 255, 255, .3);
+  -moz-box-shadow: 0 0px 1px 0 rgba(255, 255, 255, .3);
+  box-shadow: 0 0px 1px 0 rgba(255, 255, 255, .3);
+}
+
+
+/*----- fontawesome -----*/
+.col-md-3 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width:768px){
+  .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+}
+

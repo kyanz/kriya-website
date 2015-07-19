@@ -1,0 +1,63 @@
+body .flexslider {
+  margin: 0;
+  border: none;
+  background: none;
+  box-shadow: 0 0 0; 
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  -o-box-shadow: 0 0 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+body .flexslider .slides {
+  margin: 0;
+  padding: 0;
+}
+body .flexslider .slides li .views-field .field-content img {
+  padding: 0;
+  margin: 0;
+}
+.view .flex-nav-container {
+  margin: 0px;
+}
+ol.flex-control-paging.flex-control-nav {
+  bottom: 0px;
+  z-index: 10;
+}
+ol.flex-control-paging.flex-control-nav li {
+  margin: 0 2px;
+}
+ol.flex-control-paging.flex-control-nav li a {
+  width: 25px;
+  height: 4px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.flex-direction-nav li a {  padding-top: 10px; overflow: hidden; height: 30px; }
+
+
+body .node-full .flexslider, body .node-teaser .flexslider {
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+/* ---- client testimonials --- */
+#client-testimonials ol.flex-control-paging.flex-control-nav {
+  bottom: 0px;
+}
+
+
+@media all and (max-width: 600px) {
+  .flex-control-paging {
+    display: none;
+  }
+}

@@ -1,0 +1,385 @@
+/* ---------- Color Module Styles ----------- */
+
+body,
+body.overlay {
+  color: #686868;
+  background-color: #f6f6f6;
+}
+#page {
+  background-color: #f6f6f6;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: #444444;
+}
+a:focus , a:link, a:active {
+  outline: none;
+}
+a:hover {
+  color: #f65287;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+button,
+.button,
+input[type="submit"],
+input[type="button"],
+.form-submit {
+  background-color: #f65287;
+  color: #f6f6f6;
+}
+button:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.form-submit:hover {
+  color: #ffffff;
+}
+.submitted-detail {
+  color: #ccc;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+}
+.submitted-detail a {
+  color: #ccc;
+}
+.submitted-detail a:hover {
+  color: #444444;
+}
+footer.link-wrapper .node-readmore a {
+  border: 2px solid #ccc;
+}
+footer.link-wrapper .node-readmore a:hover {
+ border-color: #f65287;
+}
+
+#top-bar {
+  background: #f65287;
+  color: #fff;
+}
+#top-bar a {
+  color: #fff;
+}
+#header {
+  background: #f6f6f6;
+  color: #444444;
+}
+.is-sticky #header {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+}
+#sticky-header {
+  background: #f6f6f6;
+}
+#navigation .selector {
+  color: #fff;
+  background-color: #f65287;
+}
+#navigation .selector option, .sticky-menu .selector option {
+  background: #fff;
+  -webkit-appearance: none;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+#navigation .selector option:hover {
+ background: #f65287;
+}
+
+/* ---- main menu ----*/
+#main-menu a {
+  color: #686868;
+}
+#main-menu a:hover, #main-menu a.active, #main-menu a.active-trail {
+  color: #f65287;
+}
+#main-menu ul ul.menu {
+  background-color: #f6f6f6;
+}
+
+
+.tabs ul.primary li a.active {
+  background-color: #f6f6f6;
+}
+.tabs ul.primary li.active a {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+/*-- banner area ---*/
+#banner-area {
+  background-color: #fbc59c;
+  color: #f6f6f6;
+}
+
+/* ----- page title wrapper --- */
+#page-title-wrapper {
+  background-color: #fbc59c;
+  color: #f6f6f6;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+#page-title-wrapper h1, #page-title-wrapper a {
+  color: #f6f6f6;
+}
+
+/* --- highlighted block ----*/
+#highlighted .block .block-inner {
+  background-color: #f6f6f6;
+  border: 1px solid #d0d3d4;
+  border-top: 3px solid #f65287;
+}
+
+
+/* --- footer columns ---- */
+#footer-columns-wrapper {
+  background-color: #444444;
+  color: #d0d3d4;
+}
+#footer-columns-wrapper a, #footer-columns h2, #footer-columns h3, #footer-columns h4, #footer-columns h5, #footer-columns h6 {
+  color: #d0d3d4;
+}
+#footer-columns-wrapper a:hover {
+  color: #fff;
+}
+#footer-columns h2.block-title {
+  color: #7c868d;
+}
+#footer-columns ul.menu li a {
+  border-bottom: 1px solid #545d68;
+}
+#footer-columns .views-field-created {
+  color: #7c868d;
+}
+
+/* --- footer ----*/
+#page-wrapper,
+#footer-wrapper {
+  background-color: #f6f6f6;
+}
+#footer-wrapper  {
+  border-top: 1px solid #bbbbbb;
+}
+
+/*--- dividers --*/
+hr {
+  background-color: #d0d3d4;
+}
+.divider {
+  border-color: #d0d3d4 !important;
+}
+
+/* --- list styles ---*/
+ul.arrow li:before, ul.arrow2 li:before, ul.arrow3 li:before,
+ul.arrow4 li:before, ul.arrow5 li:before, ul.plus li:before, ul.pen li:before, ul.star li:before,
+ul.check li:before, ul.square li:before, ul.circle li:before, ul.pin li:before, 
+ul.cross li:before, ul.disc li:before, ul.download li:before, ul.bookmark li:before {
+  color: #f65287;
+}
+ul.list-filled li:before {
+  color: #ffffff;
+  background: #f65287;
+}
+
+/* --- icon styles ---*/
+.fa.border {
+  border-color: #686868;
+  background: #f6f6f6;
+}
+.fa.filled {
+  background: #686868;
+  color: #ffffff;
+}
+.fa.filled:hover, .fa.border:hover {
+  background: #f65287;
+  color: #ffffff;
+  border-color: #f65287;
+}
+
+/* -- content boxes --- */
+.content-boxes:hover .fa {
+  color: #f65287;
+}
+.content-boxes:hover .fa.filled, .content-boxes:hover .fa.border {
+  background: #f65287;
+  color: #ffffff;
+  border-color: #f65287;
+}
+
+
+/* ---- thumb-info --- */
+.thumb-info span.thumb-info-image:before {
+  background-color: #f65287;
+}
+
+/* ---- newsletter --- */
+.simplenews-subscribe .form-text {
+  border: 1px solid #7c868d;
+}
+
+/* --- sidebar -- */
+.sidebar ul.menu li a, .sidebar .item-list ul li {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/* ----- search block ----*/
+#search-block-form input.form-text, #search-form input.form-text, .search-form input.form-text {
+  border: 1px solid #e7e7e7;
+}
+#top-bar #search-block-form input.form-text, #top-bar #search-form input.form-text, #top-bar .search-form input.form-text {
+  color: #fff;
+  background: none;
+  border: 1px solid #e75613;
+}
+
+/* --- fsocial-share ---*/
+.social-share a, .follow-links a {
+  background-color: #6a6f71;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.social-share a:hover, .follow-links a:hover {
+  background-color: #f65287;
+}
+
+/* ---- jcourcel ---- */
+.jcarousel-prev-horizontal,
+.jcarousel-next-horizontal {
+  background-color: #686868;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+.jcarousel-prev-horizontal:hover, .jcarousel-prev-horizontal:active,
+.jcarousel-next-horizontal:hover, .jcarousel-next-horizontal:active {
+  background-color: #f65287;
+}
+
+
+/* ----- blockquote -----*/
+blockquote {
+  border-left-color: 3px solid #f65287;
+  background-color: #efefef;
+}
+.info-box .info-box-inner {
+  border-color: #d0d3d4;
+  background-color: #f6f6f6;
+}
+.info-box .greybg {
+  background-color: #efefef;
+}
+.info-box .left-border {
+  border-left-color: #f65287;
+}
+.info-box .right-border {
+  border-right-color: #f65287;
+}
+.info-box .top-border {
+  border-top-color: #f65287;
+}
+.info-box .bottom-border {
+  border-bottom-color: #f65287;
+}
+.info-box .with-border {
+  border-color: #f65287;
+}
+
+
+
+/* -------------- Pager ------------- */
+.item-list .pager li.pager-item a {
+  border: 1px solid #ccc;
+  color: #fff;
+  text-decoration: none;
+  background: #ccc;
+}
+.item-list .pager li.pager-item a:hover {
+  background: #f65287;
+  border: 1px solid #f65287;
+}
+.item-list .pager li.pager-current {
+  border: 1px solid #ccc;
+  color: #f65287;
+}
+
+/* --- comments ---- */
+.comment .comment-arrow {
+  border-color: #ffffff;
+}
+
+/* -------- jquery accordion and tabs ------- */
+.jquery-ui-filter-tabs ul.ui-tabs-nav li.ui-tabs-selected, .jquery-ui-filter-tabs ul.ui-tabs-nav li.ui-tabs-active {
+  border-top: 2px solid #f65287;
+}
+.jquery-ui-filter-accordion .jquery-ui-filter-accordion-header.ui-state-active {
+  background: #f65287;
+  border-color: #f65287;
+  color: #fff;
+}
+.jquery-ui-filter-accordion .jquery-ui-filter-accordion-header.ui-state-active a {
+  color: #fff;
+}
+.jquery-ui-filter-accordion  .jquery-ui-filter-accordion-container {
+  border-color: #f65287;
+}
+
+/* -------- quick tabs ------- */
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li.active {
+  border-top: 2px solid #f65287;
+}
+
+/* ---- dropcaps ---- */
+.dropcap {
+  color: #f65287;
+}
+.dropcap.circle, .dropcap.square {
+  background: #f65287;
+}
+
+/*  --- hightlight button ---- */
+#highlighted .button, .region-featured .button, .info-box .button {
+  background-color: #f65287;
+  border-color: #f89406 #f89406 #ad6704;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+}
+
+/*------- pricing tables ------- */
+.pricing-tables ul.package.recommended li.package-name,
+.pricing-tables ul.package.recommended li.package-name div,
+.pricing-tables ul.package.recommended li.package-price {
+  background-color: #f65287;
+}
+
+/* ---- text highlights --- */
+.highlight {
+  background-color: #f65287;
+  color: #fff;
+}
+
+/* ----- selected text -------- */
+::-moz-selection{ background: #fed175; color: #ffffff; text-shadow: none; }
+::selection { background: #fed175; color: #ffffff; text-shadow: none; } 
+
+
+/*******************************************************************
+* Color Module: Don't touch                                       *
+*******************************************************************/
+
+#featured {
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  background-image: url("../images/banner-shadow.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+

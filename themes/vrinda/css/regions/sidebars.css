@@ -1,0 +1,30 @@
+
+.sidebar h2.block-title {
+  margin-bottom: 20px;
+}
+.sidebar tbody {
+  border: none;
+}
+.sidebar tr.even,
+.sidebar tr.odd {
+  background: none;
+}
+.sidebar ul.menu, .sidebar ul.menu li,
+.sidebar .item-list ul, .sidebar .item-list ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1.2em;
+}
+.sidebar ul.menu li a, .sidebar .item-list ul li {
+  padding: 10px 0;
+  display: block;
+  overflow: auto;
+}
+.sidebar ul.menu li.first a, .sidebar .item-list ul li.views-row-first {
+  padding-top: 0;
+}
+#sidebar-first ul.menu ul {
+  margin-left: 15px;
+}
+

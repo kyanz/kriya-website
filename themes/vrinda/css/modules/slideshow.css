@@ -1,0 +1,117 @@
+/* ---- thumb slideshow banner ------ */
+
+.thumb-slideshow-banner {
+  position: relative;
+  margin: 0px auto;
+  max-width: 945px;
+}
+.thumb-slideshow-banner .views-field-body {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: #dcd8d8;
+}
+.thumb-slideshow-banner .views-row-even .views-field-body {
+  left: auto;
+  right: 5%;
+}
+.thumb-slideshow-banner h1, .thumb-slideshow-banner h2, .thumb-slideshow-banner h3,
+.thumb-slideshow-banner h4, .thumb-slideshow-banner h5, .thumb-slideshow-banner h6 {
+  color: #dcd8d8;
+}
+.thumb-slideshow-banner img {
+  vertical-align: bottom;
+}
+.thumb-slideshow-banner .views-slideshow-controls-bottom {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+  display: none;
+}
+.thumb-slideshow-banner .views-slideshow-controls-bottom .views_slideshow_pager_field {
+  text-align: center;
+}
+.thumb-slideshow-banner .views-slideshow-controls-bottom .views_slideshow_pager_field .views_slideshow_pager_field_item {
+  width: 40px;
+  height: auto;
+  float: none;
+  clear: none;
+  display: inline;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 1.4s ease;
+  -moz-transition: -moz-transform 1.4s ease;
+  -o-transition: -o-transform 1.4s ease;
+  transition: transform 1.4s ease;
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  -o-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+.thumb-slideshow-banner .views-slideshow-controls-bottom .views_slideshow_pager_field .views_slideshow_pager_field_item.active {
+  -webkit-transform: scale(1.3) rotate(10deg);
+  -moz-transform: scale(1.3) rotate(10deg);
+  -ms-transform: scale(1.3) rotate(10deg);
+  -o-transform: scale(1.3) rotate(10deg);
+  transform: scale(1.3) rotate(10deg);
+  z-index: 10;
+}
+.thumb-slideshow-banner .views-slideshow-controls-bottom .views_slideshow_pager_field .views_slideshow_pager_field_item img {
+  border: 1px solid #fff;
+}
+
+/* ----- view sideshow cycle responsive -----*/
+
+.views_slideshow_cycle_main {
+  width: 100%;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+  height: auto;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: auto;
+}
+.views_slideshow_cycle_main .field-content {
+  max-width: 100%;
+  width: 100%;
+}
+.views_slideshow_cycle_main .field-content img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- field slideshow responsive ----- */
+.field-slideshow-wrapper .field-slideshow-processed {
+  padding-bottom: 0 !important;
+}
+.field-slideshow-wrapper .field-slideshow {
+  margin-bottom: 1.5em;
+}
+.field-slideshow-wrapper ul.field-slideshow-pager, .field-slideshow-wrapper ul.field-slideshow-pager li {
+  padding: 0;
+  margin: 0;
+}
+.field-slideshow-wrapper ul.field-slideshow-pager li {
+  float: left;
+  width: 20%;
+}
+.field-slideshow-wrapper ul.field-slideshow-pager li a {
+  margin: 1px;
+  display: block;
+}
+
+.field-slideshow-wrapper .field-slideshow, .field-slideshow-wrapper .field-slideshow .field-slideshow-slide {
+  width: auto !important;
+}
+.field-slideshow-slide img {
+  height: auto;
+  position: relative;
+  width: 100%;
+  vertical-align: bottom;
+}

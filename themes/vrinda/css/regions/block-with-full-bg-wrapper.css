@@ -1,0 +1,12 @@
+#block-with-full-bg-wrapper h2.block-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  max-width: 500px;
+}
+
+#block-with-full-bg-wrapper .block.odd {
+  background-color: #eee;
+  padding: 70px 0;
+}

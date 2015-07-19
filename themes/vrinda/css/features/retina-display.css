@@ -1,0 +1,111 @@
+/* ----------------- High-resolution-ready (retina-ready) -----------------------------*/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (   min--moz-device-pixel-ratio: 1.5),
+only screen and (     -o-min-device-pixel-ratio: 3/2),
+only screen and (    -ms-min-device-pixel-ratio: 1.5),
+only screen and (        min-device-pixel-ratio: 1.5)
+{
+
+  #navigation .selector span {
+    background-image: url("../../images/responsive-nav@2x.png");
+    background-size: 21px 16px;
+  }
+  /* --- search button --- */
+  #search-block-form input.form-submit, #search-form input.form-submit, .search-form input.form-submit {
+    background-image: url('../../images/search-btn@2x.png');
+    background-size: 17px 17px;
+  }
+
+  /* --- cart icon ---*/
+  .block-uc-cart li.cart-block-view-cart {
+    background-image: url("../../images/icons/cart@2x.png");
+    background-size: 15px 15px;
+  }
+  /* --- add to cart icon ---*/
+  .add-to-cart .form-actions .node-add-to-cart {
+    background-image: url("../../images/icons/cart-white@2x.png");
+    background-size: 15px 15px;
+  }
+
+  /*-- jcourcel next previous button ---*/
+  #page .jcarousel-next-horizontal {
+    background-image: url("../../images/next_btn@2x.png");
+    background-size: 12px 20px;
+  }
+  #page .jcarousel-prev-horizontal {
+    background-image: url("../../images/previous_btn@2x.png");
+    background-size: 12px 20px;
+  }
+  
+  /* -- follow link icons --- */
+  .follow-links a {
+    background-image: url('../../images/social-icons/social-icons-white-sprite@2x.png');
+    background-size: 333px 182px;
+  }
+  
+  /* -- share icons --- */
+  .sharethis-buttons span.stButton {
+    background-image: url('../../images/social-icons/social-icons-white-sprite-big-icon@2x.png');
+    background-size: 388px 212px;
+  }
+
+  /* ---- colorbox ---*/
+  a.colorbox.init-colorbox-processed:before {
+    background-image: url('../../images/icons/zoom@2x.png');
+    background-size: 16px 16px;
+  }
+
+  /* ---- back to top ---*/
+  #backtotop {
+    background-image: url('../../images/up-aero@2x.png');
+    background-size: 20px 12px;
+  }
+
+  /* --- contact icons ---*/
+  .address {
+    background-image: url('../../images/icons/address-white@2x.png');
+    background-size: 20px 16px;
+  }
+  .phone {
+    background-image: url('../../images/icons/phone-white@2x.png');
+    background-size: 16px 16px;
+  }
+  .e-mail {
+    background-image: url('../../images/icons/email-white@2x.png');
+    background-size: 18px 15px;
+  }
+  #main .address {
+    background-image: url('../../images/icons/address@2x.png');
+    background-size: 20px 16px;
+  }
+  #main .phone {
+    background-image: url('../../images/icons/phone@2x.png');
+    background-size: 16px 16px;
+  }
+  #main .e-mail {
+    background-image: url('../../images/icons/email@2x.png');
+    background-size: 18px 15px;
+  }
+
+  @media all and (max-width: 850px) {
+    .region-header #search-block-form input.form-text, .region-header #search-form input.form-text, .region-header .search-form input.form-text {
+      background-image: url('../../images/search-btn@2x.png');
+      background-size: 16px 16px;
+    }
+    #top-bar .region a.contact-us {
+      background-image: url("../../images/icons/contact@2x.png");
+      background-size: 17px 13px;
+    }
+    #top-bar .region a.login {
+      background-image: url("../../images/icons/login@2x.png");
+      background-size: 18px 15px;
+    }
+    #top-bar .region a.logout {
+      background-image: url("../../images/icons/logout@2x.png");
+      background-size: 18px 15px;
+    }
+  }
+
+} /* end: media query */

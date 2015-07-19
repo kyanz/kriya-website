@@ -1,0 +1,28 @@
+#featured {
+  text-align: center;
+  position: relative;
+}
+#featured h2.block-title {
+  margin: 0 auto 7px auto;
+  max-width: 650px;
+  text-align: center;
+}
+#featured p {
+  margin-bottom: 5px;
+}
+#featured p:last-child,
+#featured ul:last-child {
+  margin-bottom: 0;
+}
+
+#featured .region-wrapper:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 20px solid transparent;
+  z-index: 1;
+  left: 50%;
+  margin-left: -22px;
+  bottom: -40px;
+  border-top-color: #fff;
+}

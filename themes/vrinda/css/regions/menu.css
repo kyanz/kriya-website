@@ -1,0 +1,199 @@
+#navigation .selector {
+  margin: 40px 0 0 0;
+  padding: 0;
+  border: none;
+  font-weight: bold;
+  line-height: 35px;
+  height: 35px;
+  width: 35px;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  cursor: pointer !important;
+  text-align: left;
+  position: relative;
+}
+#navigation .selector:hover {
+  opacity: 1;
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+}
+#navigation .selector select:focus {
+  outline: 0;
+}
+#navigation .selector span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-image: url("../../images/responsive-nav.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  text-indent: -999px;
+  background-position: center center;
+}
+#navigation .selector select {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 40px;
+  background: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#navigation .selector option {
+  padding: 10px 30px;
+}
+  
+/* ---- main menu -----*/
+#main-menu {
+  text-align: center;
+  display: none;
+}
+#main-menu ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+#main-menu ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+  height: 110px;
+  line-height: 110px;
+  text-transform: uppercase;
+  position: relative;
+  float: none;
+}
+/* ie7 fix */
+#ie7 #main-menu ul li { display: inline }
+#main-menu ul li a {
+  padding: 0 15px 0 15px;
+  letter-spacing: 0.02em;
+  line-height: 22px;
+  position: relative;
+}
+#main-menu ul li:first-child a, #main-menu ul li.first a {
+  border-left: 0;
+}
+#main-menu ul li:last-child a, #main-menu ul li.last a {
+  padding-right: 0;
+}
+#main-menu ul ul.menu {
+  display: none;
+  height: auto;
+  position: absolute;
+  left: 10px;
+  top: 100%;
+  padding: 0 12px;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.05);
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+#ie8 #main-menu ul ul.menu {
+  border: 1px solid #e7e7e7;
+}
+#main-menu ul ul.menu li {
+  height: auto;
+  line-height: 20px;
+  border-left: 0px;
+  border-top: 1px solid #e7e7e7;
+  float: none;
+  font-size: 12px;
+  display: block;
+}
+#main-menu ul ul.menu li a {
+  border: none;
+  padding: 0;
+  padding: 8px 0;
+  display: block;
+  text-shadow: 0 0 0 #fff;
+}
+#main-menu ul ul.menu li:first-child, #main-menu ul ul.menu li.first {
+  border-top: none;
+}
+/* third level */
+#main-menu ul ul.menu li ul {
+  left: 180px;
+  top: 0;
+  margin: 0;
+}
+
+/*indicators*/
+#main-menu a.sf-with-ul {
+  min-width: 1px;
+  padding-right: 30px;
+}
+#main-menu .sf-sub-indicator {
+  display: block;
+  width: 8px;
+  height: 5px;
+  text-indent: -999em;
+  background: url('../../images/menu-arrow.png') bottom left;
+  position: absolute;
+  top: 8px;
+  right: 18px;
+}
+#main-menu ul li:last-child .sf-sub-indicator, #main-menu ul li.last .sf-sub-indicator {
+  right: -15px;
+}
+#main-menu a:focus >.sf-sub-indicator, 
+#main-menu a:hover >.sf-sub-indicator, 
+#main-menu a:active >.sf-sub-indicator, 
+#main-menu li:hover >a >.sf-sub-indicator, 
+#main-menu li.sfHover >a >.sf-sub-indicator {
+  background: url('../../images/menu-arrow.png') top left;
+}
+#main-menu ul ul.menu .sf-sub-indicator,
+#main-menu ul ul.menu a >.sf-sub-indicator {
+  display: block;
+  background: url('../../images/menu-arrow.png') bottom right;
+  width: 5px;
+  height: 8px;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+#main-menu ul ul.menu a:focus >.sf-sub-indicator, 
+#main-menu ul ul.menu a:hover >.sf-sub-indicator, 
+#main-menu ul ul.menu a:active >.sf-sub-indicator, 
+#main-menu ul ul.menu li:hover >a >.sf-sub-indicator, 
+#main-menu ul ul.menu li.sfHover >a >.sf-sub-indicator {
+  background: url('../../images/menu-arrow.png') top right;
+}
+
+/*---- location map fixing --- */
+#main-menu ul.menu li:hover ul, #main-menu ul.menu li:hover ul li:hover ul {
+  display: block;
+}
+#main-menu ul.menu li:hover ul ul, #main-menu ul.menu ul li:hover ul ul {
+  display: none;
+}
+
+
+
+@media all and (min-width: 851px) {
+  #main-menu {
+    display: block;
+  }
+  #navigation .selector {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+.view .view-header, .view .view-footer {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+
+.view .view-header {
+  padding-bottom: 20px;
+}
+.view .view-footer {
+  padding-top: 20px;
+}
+
+.view .views-field-title {
+  font-weight: bold;
+}
+
+
+.image-field, .title-field, .date-field, .group-fields {
+  margin-bottom: 1em;
+}
+.group-fields .image-field, .group-fields .title-field, .group-fields .date-field {
+  margin-bottom: 0;
+}

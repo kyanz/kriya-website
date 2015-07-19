@@ -1,0 +1,74 @@
+.block-quicktabs .quicktabs-wrapper {
+  font-size: 1.08em;
+}
+.block-quicktabs .quicktabs-wrapper .quicktabs_main {
+  border: 1px solid #d3d3d3;
+  clear: both;
+  padding: 10px;
+  position: relative;
+  top: -1px;
+  background: #fff;
+}
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 42px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li {
+  float: left;
+  display: block;
+  list-style: none;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-color: #d3d3d3;
+  border-style: solid;
+  border-width: 1px;
+  background: #fff url(../../images/bg-shade-light.png) repeat-x bottom left;
+}
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li.first {
+  border-right: none;
+}
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li a,
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li a:visited {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none !important;
+  border: none !important;
+  position: relative;
+}
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li.active {
+  background: #fff;
+  border-top-color: #888;
+  border-top-width: 2px;
+  border-bottom: none;
+}
+.block-quicktabs .quicktabs-wrapper .quicktabs_main .content, .block-quicktabs .quicktabs-wrapper .quicktabs_main .block {
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+}
+.block-quicktabs .quicktabs-wrapper .quicktabs_main ul {
+  padding: 0px;
+  margin: 0px -10px;
+  list-style: none;
+}
+.block-quicktabs .quicktabs-wrapper .quicktabs_main ul li {
+  border-bottom: 1px solid #d3d3d3;
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+.block-quicktabs .quicktabs-wrapper .quicktabs_main ul li.last {
+  border: none;
+}

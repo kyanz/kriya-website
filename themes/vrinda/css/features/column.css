@@ -1,0 +1,49 @@
+
+.col-one-half, .col-one-third, .col-two-third, .col-three-fourth, .col-one-fourth {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+  width: 100%;
+  clear: none;
+  position: relative;
+}
+.columns {
+  margin: 0 0 0 -30px;
+  overflow: hidden;
+}
+.col-one-half .col-inner, .col-one-third .col-inner, .col-two-third .col-inner, .col-three-fourth .col-inner, .col-one-fourth .col-inner {
+  margin: 0 0 30px 30px;
+}
+.col-wrapper p:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media all and (min-width: 800px) {
+
+  .col-one-half .col-inner, .col-one-third .col-inner, .col-two-third .col-inner, .col-three-fourth .col-inner, .col-one-fourth .col-inner {
+    margin-bottom: 0;
+  }
+  .col-one-half, .col-one-third, .col-two-third, .col-three-fourth, .col-one-fourth {
+    float: left;
+  }
+  .col-one-half {
+    width: 50%;
+  }
+  .col-one-third {
+    width: 33.33333333333333%;
+  }
+  .col-two-third {
+    width: 66.66666666666667%;
+  }
+  .col-one-fourth {
+    width: 25%;
+  }
+  .col-three-fourth {
+    width: 75%;
+  }
+
+}
+

@@ -1,0 +1,46 @@
+.region-header p, .region-header ul, .region-header ul li, .region-header ul li a, .region-header table, .region-header table td {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: none;
+  clear: none;
+}
+.region-header table {
+  display: inline;
+}
+.region-header .block {
+  font-size: 12px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  float: left;
+}
+.region-header h2.block-title {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8em;
+}
+.region-header ul li {
+  display: inline;
+}
+.region-header ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.region-header table td {
+  padding: 0 10px;
+}
+.region-header ul li.first a, .region-header ul li:first-child a {
+  padding-left: 0;
+  border-left: none;
+}
+.region-header ul li.last a, .region-header ul li:last-child a {
+  padding-right: 0;
+  border-right: none;
+}
+/* --- centering all the block for mobile ---- */
+.region-header .block, .region-header ul {
+  text-align: center;
+}
+

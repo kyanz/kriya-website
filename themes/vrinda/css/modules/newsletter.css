@@ -1,0 +1,12 @@
+
+.simplenews-subscribe {
+  position: relative;
+  max-width: 250px;
+}
+.simplenews-subscribe .form-item {
+  margin: 0;
+}
+.simplenews-subscribe .form-text {
+  width: 100%;
+  background: none;
+}

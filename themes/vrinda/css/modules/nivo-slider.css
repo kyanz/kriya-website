@@ -1,0 +1,15 @@
+
+.block-nivo-slider .nivo-controlNav {
+  padding: 0;
+}
+.block-nivo-slider .theme-default .nivoSlider {
+  -webkit-box-shadow: 0px 0px 1px 0px #4a4a4a;
+  -moz-box-shadow: 0px 0px 1px 0px #4a4a4a;
+  box-shadow: 0px 0px 1px 0px #4a4a4a;
+}
+
+@media all and (max-width: 600px) {
+  .nivo-controlNav {
+    display: none;
+  }
+}

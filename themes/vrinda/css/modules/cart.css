@@ -1,0 +1,140 @@
+/* --- cart block ---- */
+.block-uc-cart {
+  position: relative;
+  background-color: rgba(0,0,0,0.04);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+}
+.block-uc-cart .block-inner {
+  padding: 0 15px;
+}
+.block-uc-cart li.cart-block-view-cart {
+  background-image: url("../../images/icons/cart.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+#top-bar .region .block-uc-cart li.cart-block-view-cart a {
+  padding-left: 20px;
+}
+
+/* ----- shopping cart ---- */
+#uc-cart-view-form .remove .form-submit {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+  background-image: url("../../images/icons/cross.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#uc-cart-view-form .entity-uc-cart-item h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/*---- add to cart form ---- */
+.add-to-cart  {
+  margin: 1em 0 !important;
+}
+.add-to-cart .form-item-qty, .add-to-cart .form-actions {
+  clear: none;
+  display: inline;
+}
+.add-to-cart .form-actions .node-add-to-cart {
+  padding: 7px 8px 7px 25px;
+  background-image: url("../../images/icons/cart.png");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+
+}
+
+/* ---- cart pane ---- */
+#cart-form-pane {
+  margin-bottom: 50px;
+}
+#cart-form-pane #edit-actions a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#cart-form-pane #edit-actions a:before {
+  content: "← ";
+}
+
+/*---- coupons ---*/
+#uc-cart-pane-coupon,
+#uc-cart-pane-coupon-automatic {
+  padding: 1em;
+  border: 1px solid #e7e7e7;
+}
+
+
+@media all and (max-width: 850px) {
+  #top-bar .region .block-uc-cart {
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    float: right;
+  }
+  #top-bar .region .block-uc-cart .block-inner {
+    padding: 0;
+    margin: 0;
+  }
+  #top-bar .region .block-uc-cart ul.links li {
+    display: none;
+  }
+  #top-bar .region .block-uc-cart ul.links li.cart-block-view-cart, #top-bar .region .block-uc-cart ul.links li.cart-block-view-cart a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    text-indent: -999px;
+    background-position: center center;
+  }
+  #top-bar .region #block-menu-menu-login- , #top-bar .region #block-menu-menu-login- li {
+    padding: 0;
+    margin: 0;
+    float: right;
+  }
+  #top-bar .region a.contact-us, #top-bar .region a.login, #top-bar .region a.logout {
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    text-indent: -999px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.04);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(0,0,0,.2),0 1px 2px rgba(0,0,0,.2);
+  }
+  #top-bar .region a.contact-us {
+    background-image: url("../../images/icons/contact.png");
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+  #top-bar .region a.login {
+    background-image: url("../../images/icons/login.png");
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+  #top-bar .region a.logout {
+    background-image: url("../../images/icons/logout.png");
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+}

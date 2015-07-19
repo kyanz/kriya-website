@@ -1,0 +1,23 @@
+#banner-area .block .content {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+#banner-area .view-drupal-promotional-banner .views-field-body {
+  max-width: 940px;
+  min-height: 500px;
+  padding: 0 15px;
+  margin: auto;
+}
+#banner-area .view-drupal-promotional-banner .views-field-body .field-content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+#banner-area h2 , #banner-area h4 {
+  color: #fff;
+}

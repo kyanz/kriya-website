@@ -1,0 +1,48 @@
+#footer-columns .block {
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+#footer-columns h2.block-title {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#footer-columns ul, #footer-columns ul li, #footer-columns ul li a {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#footer-columns ul.menu li a {
+  padding: 5px 0;
+  display: block;
+}
+#footer-columns ul.menu li.first a, #footer-columns ul.menu li:first-child a {
+  border-top: none;
+  padding-top: 0;
+}
+
+#footer-columns .view-content .views-row {
+  margin-bottom: 10px;
+}
+
+#footer-columns .views-field-title {
+  text-transform: uppercase;
+  margin: 0;
+}
+#footer-columns .views-field-created {
+  margin-top: -5px;
+}
+#footer-columns .views-field-created:before {
+  font-family: FontAwesome;
+  content: "\f073";
+  padding-right: 3px;
+}
+
+
+.footer-logo {
+  margin-top: -5px;
+  margin-bottom: 15px;
+}

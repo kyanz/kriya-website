@@ -1,0 +1,109 @@
+.pricing-tables {
+  margin: 5px 0;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+}
+.pricing-tables ul, .pricing-tables ul li {
+  list-style: none;
+}
+.pricing-tables ul.package {
+  width: 100%;
+  text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  position: relative;
+}
+.pricing-tables ul.package li.package-name {
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.pricing-tables ul.package li.package-price {
+  color: #fff;
+  font-weight: 600;
+  padding: 24px 0;
+  font-size: 32px;
+}
+.pricing-tables ul.package li.package-price span {
+  font-size:12px;
+  color:#e5e5e5;
+  font-weight:400;
+  display:block;
+}
+.pricing-tables ul.package li.package-signup {
+  background:#eee;
+  padding:12px 20px;
+  border-top:1px solid #d9d9d9;
+  text-align:center;
+}
+.pricing-tables ul.package ul {
+  margin:0;
+}
+.pricing-tables ul.package ul li.package-feature {
+  background:#f4f4f4;
+  padding:10px 0;
+  border-bottom:1px dotted #ccc;
+  margin:0 20px;
+}
+.pricing-tables ul.package ul li.package-feature:last-child {
+  border-bottom:0;
+}
+.pricing-tables ul.package.free li.package-name {
+  background:#848484;
+}
+.pricing-tables ul.package.free li.package-price {
+	background:#7B7B7B;
+}
+.pricing-tables ul.package.small li.package-name {
+  background:#777777;
+}
+.pricing-tables ul.package.small li.package-price {
+  background:#6f6f6f;
+}
+.pricing-tables ul.package.basic li.package-name {
+  background:#6B6B6B;
+}
+.pricing-tables ul.package.basic li.package-price {
+  background:#5B5B5B;
+}
+.pricing-tables ul.package.pro li.package-name {
+  background:#5B5B5B;
+}
+.pricing-tables ul.package.pro li.package-price {
+  background:#545454;
+}
+.pricing-tables ul.package.recommended {
+  background:#fff;
+  z-index:1;
+  box-shadow:0 0 20px 0 rgba(0,0,0,0.2),inset 0 0 0 4px #fff;
+  -webkit-box-shadow:0 0 20px 0 rgba(0,0,0,0.2),inset 0 0 0 4px #fff;-moz-box-shadow:0 0 20px 0 rgba(0,0,0,0.2),inset 0 0 0 4px #fff;transform:scale(1.037);
+  -moz-transform:scale(1.037);
+  -webkit-transform:scale(1.037);
+}
+.pricing-tables ul.package.recommended li.package-name {
+  padding:0;
+}
+.pricing-tables ul.package.recommended li.package-name div {
+  width:100%;
+  height:100%;
+  display:inline-block;
+  padding:10px 0;
+}
+.pricing-tables ul.package.recommended ul li.package-feature {
+  background:#fff;
+}
+
+
+
+@media all and (min-width: 851px) {
+
+  .pricing-tables ul.package {
+    width: 25%;
+    display: inline;
+    display: inline-block;
+  }
+}

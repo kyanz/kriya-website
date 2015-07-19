@@ -1,0 +1,13 @@
+
+#site-map ul li.expanded {
+  list-style-image: url("../../images/list/plus.png");
+}
+#site-map ul li.leaf {
+  list-style-image: url("../../images/list/arrow3.png");
+}
+#site-map ul li a {
+  border-bottom: 1px solid #000;
+}
+#site-map ul li a:hover {
+  border: none;
+}

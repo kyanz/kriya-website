@@ -1,0 +1,315 @@
+@import url('fontawesome/css/font-awesome.min.css');
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+
+
+/*  Basic typography & Headings  */
+
+body {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+}
+input[type=text],
+input[type=email],
+input[type=password],
+textarea,
+textarea.form-textarea,
+input[type=search],
+button,
+input[type="submit"],
+input[type="button"],
+.form-submit {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+#site-slogan,
+.ui-widget,
+.comment-form label,
+.block-quicktabs .quicktabs-wrapper ul.quicktabs-tabs li a {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none; /* default hover style for links */
+}
+a:focus {
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 15px;	
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 24px;	
+  margin-bottom: 15px;	
+}
+h4 {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;	
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+h6 {
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.bold-style {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+p {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+ol {
+  margin: 0 0 25px 25px;
+  list-style-type: decimal;
+}
+ul {
+  margin: 0 0 25px 25px;
+}
+small {
+  font-size: 85%;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+cite {
+  font-style: normal;
+  font-size: 110%;
+}
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  margin: 25px 0;
+  padding: 25px;
+  border-left: 3px solid #f65287;
+  background-color: #efefef;
+}
+blockquote:before {
+  color: #bbb;
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.2em;
+  vertical-align: -.4em;
+}
+blockquote:after {
+  color: #bbb;
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -.45em;
+}
+blockquote > p:first-child {
+  display: inline;
+}
+blockquote cite {
+  font-weight: bold;
+}
+code,
+pre,
+kbd,
+samp,
+var {
+  padding: 0 0.4em;
+  font-size: 0.8em;
+  font-family: Menlo, Consolas, "Andale Mono", "Lucida Console", "Nimbus Mono L", "DejaVu Sans Mono", monospace, "Courier New";
+}
+code {
+  background-color: #f2f2f2;
+  background-color: rgba(40, 40, 0, 0.06);
+}
+pre code,
+pre kbd,
+pre samp,
+pre var,
+kbd kbd,
+kbd samp,
+code var {
+  font-size: 100%;
+  background-color: transparent;
+}
+pre code,
+pre samp,
+pre var {
+  padding: 0;
+}
+.description code {
+  font-size: 1em;
+}
+kbd {
+  background-color: #f2f2f2;
+  border: 1px outset #575757;
+  margin: 0 3px;
+  color: #666;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 5px;
+}
+pre {
+  background-color: #f2f2f2;
+  background-color: rgba(40, 40, 0, 0.06);
+  margin: 1.5em 0;
+  overflow: hidden;
+  padding: 15px;
+  white-space: pre-wrap;
+}
+
+/*  End of Basic typography & Headings  */
+
+#page-title-wrapper h1#page-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 3em;
+  line-height: 35px;
+  margin: 0;
+}
+@media all and (min-width: 851px) {
+  #page-title-wrapper h1#page-title {
+    line-height: 55px;
+    font-size: 5em;
+    margin-bottom: -5px;
+  }
+}
+
+h2.block-title {
+  font-weight: 800;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.sidebar h2.block-title {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+/* ------------------ Table Styles ------------------ */
+
+table {
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+table thead {
+  border-bottom: 2px solid #dddddd;
+}
+table th,
+table td {
+  padding: 1em;
+  vertical-align: top;
+  padding: 8px;
+  line-height: 1.8em;
+  border: 1px solid #fff;
+  text-align: left; /* LTR */
+}
+table tr th {
+  background: #757575;
+  background: rgba(0, 0, 0, 0.51);
+  border-bottom-style: none;
+  font-weight: bold;
+  vertical-align: top;
+}
+table tr th,
+table tr th a,
+table tr th a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+tr.odd {
+  background: #e4e4e4;
+  background: rgba(0, 0, 0, 0.105);
+}
+tr,
+tr.even {
+  background: #efefef;
+  background: rgba(0, 0, 0, 0.063);
+}
+table ul.links {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+table ul.links li {
+  padding: 0 1em 0 0;
+}
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  border-left: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}

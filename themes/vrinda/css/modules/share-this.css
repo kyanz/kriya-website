@@ -1,0 +1,120 @@
+#main .sharethis-buttons {
+  margin: 20px 0;
+}
+.sharethis-buttons span.stButton {
+  margin: 2px 0;
+  padding: 0;
+  display: inline;
+  display: inline-block;
+  background-image: url('../../images/social-icons/social-icons-white-sprite.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  text-indent: 9999px;
+  font-size: 0;
+  overflow: hidden;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  height: 35px;
+  width: 35px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: bottom;
+}
+
+.sharethis-buttons .st_facebook_large .stButton {
+  background-position: -175px 0;
+  background-color: #4a6d9d;
+}
+.sharethis-buttons .st_twitter_large .stButton {
+  background-position: -70px 0;
+  background-color: #3bc1ed;
+}
+.sharethis-buttons .st_googleplus_large .stButton {
+  background-position: -315px -105px;
+  background-color: #d53824;
+}
+.sharethis-buttons .st_digg_large .stButton {
+  background-position: -245px 0;
+  background-color: #205685;
+}
+.sharethis-buttons .st_pinterest_large .stButton {
+  background-position: -70px -105px;
+  background-color: #cb1f25;
+}
+.sharethis-buttons .st_delicious_large .stButton {
+  background-position: -280px -35px;
+  background-color: #3274d1;
+}
+.sharethis-buttons .st_linkedin_large .stButton {
+  background-position: 0px -35px;
+  background-color: #0b7bb5;
+}
+.sharethis-buttons .st_rss_large .stButton {
+  background-position: -315px -35px;
+  background-color: #fe8f00;
+}
+.sharethis-buttons .st_dribbble_large .stButton {
+  background-position: -35px 0;
+  background-color: #ef5a92;
+}
+.sharethis-buttons .st_youtube_large .stButton {
+  background-position: -245px -35px;
+  background-color: #bf2f29;
+}
+.sharethis-buttons .st_vimeo_large .stButton {
+  background-position: -70px -35px;
+  background-color: #4c8ab0;
+}
+.sharethis-buttons .st_flickr_large .stButton {
+  background-position: -105px 0;
+  background-color: #136dd5;
+}
+.sharethis-buttons .st_tumblr_large .stButton {
+  background-position: -140px -35px;
+  background-color: #3d658d;
+}
+.sharethis-buttons .st_blogger_large .stButton {
+  background-position: -140px -70px;
+  background-color: #ff6501;
+}
+.sharethis-buttons .st_skype_large .stButton {
+  background-position: -210px 0;
+  background-color: #36c4f3;
+}
+.sharethis-buttons .st_deviantart_large .stButton {
+  background-position: -35px -140px;
+  background-color: #3e4e43;
+}
+.sharethis-buttons .st_yahoo_large .stButton {
+  background-position: -105px -35px;
+  background-color: #9251a2;
+}
+.sharethis-buttons .st_forrst_large .stButton {
+  background-position: 0 0;
+  background-color: #40833e;
+}
+.sharethis-buttons .st_stumbleupon_large .stButton {
+  background-position: -105px -70px;
+  background-color: #eb4924;
+}
+.sharethis-buttons .st_myspace_large .stButton {
+  background-position: -315px -70px;
+  background-color: #01277c;
+}
+.sharethis-buttons .st_reddit_large .stButton {
+  background-position: 0px -140px;
+  background-color: #404040;
+}
+.sharethis-buttons .st_sharethis_large .stButton {
+  background-position: -70px -140px;
+  background-color: #89d07d;
+}
+.sharethis-buttons .st_email_large .stButton {
+  background-position: -210px -140px;
+  background-color: #003a66;
+}
+
