@@ -1,0 +1,92 @@
+name = Vrinda Profile
+description = Drupal 7 Responsive Theme!.
+version = VERSION
+core = 7.x
+; ----------
+; Dependencies
+; ----------
+; Chaos tool suite
+dependencies[] = ctools
+; Core
+dependencies[] = block
+dependencies[] = blog
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = overlay
+dependencies[] = path
+dependencies[] = php
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = toolbar
+dependencies[] = update
+dependencies[] = user
+; Fields
+dependencies[] = field_default_token
+dependencies[] = field_slideshow
+; FlexSlider
+dependencies[] = flexslider
+dependencies[] = flexslider_fields
+dependencies[] = flexslider_views
+; Input filters
+dependencies[] = jquery_ui_filter
+dependencies[] = jquery_ui_filter_accordion
+dependencies[] = jquery_ui_filter_tabs
+; Mail
+dependencies[] = simplenews
+; Media
+dependencies[] = imce
+; Other
+dependencies[] = back_to_top
+dependencies[] = colorbox
+dependencies[] = faq
+dependencies[] = follow
+dependencies[] = libraries
+dependencies[] = locationmap
+dependencies[] = menu_attributes
+dependencies[] = menu_block
+dependencies[] = nivo_slider
+dependencies[] = pathauto
+dependencies[] = quicktabs
+dependencies[] = retina_images
+dependencies[] = site_map
+dependencies[] = tipsy
+dependencies[] = token
+dependencies[] = twitter_block
+; Sharing
+dependencies[] = sharethis
+; Social media
+dependencies[] = socialmedia
+; Taxonomy
+dependencies[] = tagadelic
+; User interface
+dependencies[] = jquery_update
+dependencies[] = wysiwyg
+; Views
+dependencies[] = views
+dependencies[] = views_php
+dependencies[] = views_ui
+; Webform
+dependencies[] = webform
+; Widgets
+dependencies[] = widgets
+
+files[] = vrinda_profile.profile
