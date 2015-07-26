@@ -137,3 +137,89 @@ sudo chmod 644 /var/www/drupal/sites/default/settings.php
 cd /var/www/drupal
 sudo drush -y site-install standard --account-name=drupal_user --account-pass=drupal_password --db-url=mysql://db_user:db_password@db_ipaddr/db_name
 
+#---------
+# Backups
+#---------
+
+# Backup data to an  Amazon AWS S3 bucket encrypted using a password.
+
+# Install s3cmd for backups
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install s3cmd
+
+# Configure s3cmd
+S3_ACCESS_KEY="s3_access_key"
+S3_SECRET_KEY="s3_secret_key"
+S3_ENCRYPTION_PASSWORD="s3_encryption_password"
+S3_BUCKET_NAME="s3_bucket_name"
+(cat << EOF
+[default]
+access_key = $S3_ACCESS_KEY
+bucket_location = US
+cloudfront_host = cloudfront.amazonaws.com
+default_mime_type = binary/octet-stream
+delete_removed = False
+dry_run = False
+enable_multipart = True
+encoding = UTF-8
+encrypt = False
+follow_symlinks = False
+force = False
+get_continue = False
+gpg_command = /usr/bin/gpg
+gpg_decrypt = %(gpg_command)s -d --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_encrypt = %(gpg_command)s -c --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_passphrase = $ENCRYPTION_PASSWORD
+guess_mime_type = True
+host_base = s3.amazonaws.com
+host_bucket = %(bucket)s.s3.amazonaws.com
+human_readable_sizes = False
+invalidate_on_cf = False
+list_md5 = False
+log_target_prefix =
+mime_type =
+multipart_chunk_size_mb = 15
+preserve_attrs = True
+progress_meter = True
+proxy_host =
+proxy_port = 0
+recursive = False
+recv_chunk = 4096
+reduced_redundancy = False
+secret_key = $S3_SECRET_KEY
+send_chunk = 4096
+simpledb_host = sdb.amazonaws.com
+skip_existing = False
+socket_timeout = 300
+urlencoding_mode = normal
+use_https = True
+verbosity = WARNING
+website_endpoint = http://%(bucket)s.s3-website-%(location)s.amazonaws.com/
+website_error =
+website_index = index.html
+EOF
+) | sudo tee /home/ubuntu/.s3cfg
+
+# Secure config file
+sudo chmod 400 ~/.s3cfg
+
+# Set up cron job to run the backup task every day
+(cat << EOF
+#!/bin/bash
+sudo su - drupal -c "cd /var/www/drupal && drush archive-dump"
+test -x /usr/bin/s3cmd || exit 0
+/usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync /home/drupal/drush-backups/ s3://$S3_BUCKET_NAME/drush-backups/
+EOF
+) | sudo tee /etc/cron.daily/drupal-backup
+
+sudo chmod +x /etc/cron.daily/drupal-backup
+
+# To trigger a manual backup
+# sudo s3cmd --config=/home/ubuntu/.s3cfg sync /home/drupal/drush-backups/ s3://$S3_BUCKET_NAME/drush-backups/
+
+# To trigger a manual restore
+# sudo s3cmd --config=/home/ubuntu/.s3cfg sync s3://$S3_BUCKET_NAME/drush-backups/ /home/drupal/drush-backups/
+
+# Backups will accumulate over time (sync is configured not to delete removed
+# files automatically). To clean up old backups do:
+# sudo s3cmd --config=/home/ubuntu/.s3cfg --delete-removed sync /home/drupal/drush-backups/ s3://$S3_BUCKET_NAME/automysqlbackup/
+
