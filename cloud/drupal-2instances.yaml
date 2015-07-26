@@ -102,6 +102,26 @@ parameters:
 #    default: dbpassword
 #    hidden: true
 
+  s3_access_key:
+    type: string
+    description: Amazon AWS S3 access key (for backups to S3)
+    default: disable
+
+  s3_secret_key:
+    type: string
+    description: Amazon AWS S3 secret key
+    default: disable
+
+  s3_encryption_password:
+    type: string
+    description: S3 backup encryption password
+    default: disable
+
+  s3_bucket_name:
+    type: string
+    description: Amazon AWS S3 bucket name
+    default: disable
+
 resources:
   webserver_config:
     type: OS::Heat::SoftwareConfig
@@ -126,6 +146,10 @@ resources:
             db_password: { get_attr: [ db_password, value ] }
             db_ipaddr: { get_attr: [ dbserver, first_address ] }
             db_name: { get_param: db_name }
+            s3_access_key: { get_param: s3_access_key }
+            s3_secret_key: { get_param: s3_secret_key }
+            s3_encryption_password: { get_param: s3_encryption_password }
+            s3_bucket_name: { get_param: s3_bucket_name }
 
   webserver_init:
     type: OS::Heat::MultipartMime
@@ -207,6 +231,10 @@ resources:
             db_user: { get_param: db_username }
             db_password: { get_attr: [ db_password, value ] }
             db_name: { get_param: db_name }
+            s3_access_key: { get_param: s3_access_key }
+            s3_secret_key: { get_param: s3_secret_key }
+            s3_encryption_password: { get_param: s3_encryption_password }
+            s3_bucket_name: { get_param: s3_bucket_name }
 
   database_init:
     type: OS::Heat::MultipartMime
