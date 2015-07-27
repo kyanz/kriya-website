@@ -116,19 +116,23 @@ exit
 EOF
 ) | sudo mysql -u root -h 127.0.0.1
 
-# Create website databases and grant DB access to corresponding drupal users
-(cat << EOF
+DRUPAL_SOURCE="drupal_source"
+
+if [[ "${DRUPA_SOURCE}" == "drush" ]]; then
+  # Create website databases and grant DB access to corresponding drupal users
+  (cat << EOF
 use mysql
 CREATE DATABASE db_name CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES ON \`db_name\`.* TO 'db_user'@'%' IDENTIFIED BY 'db_password';
 flush privileges;
 exit
 EOF
-) | sudo mysql -u root -h 127.0.0.1
+  ) | sudo mysql -u root -h 127.0.0.1
+fi
+
+# TODO: support restoring existing database from backup
 
 # To connect to the database from the webserver host: mysql -h ${PRIVATE_IP} -u ${USER} -p
-
-# TODO: Allow to import existing Drupal database
 
 #---------
 # Backups
