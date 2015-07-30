@@ -130,8 +130,6 @@ EOF
   ) | sudo mysql -u root -h 127.0.0.1
 fi
 
-# TODO: support restoring existing database from backup
-
 # To connect to the database from the webserver host: mysql -h ${PRIVATE_IP} -u ${USER} -p
 
 #---------
@@ -225,3 +223,20 @@ sudo chmod +x /etc/cron.daily/s3sync
 # files automatically). To clean up old backups do:
 # /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg --delete-removed sync /var/lib/automysqlbackup/ s3://$S3_BUCKET_NAME/automysqlbackup/
 
+###########################
+# Restore existing database
+###########################
+
+DRUPAL_SOURCE="drupal_source"
+
+# If we are deploying an existing codebase, we should also have a database
+# backup we may want to restore.
+if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
+  sudo s3cmd --config=/home/ubuntu/.s3cfg sync s3://$S3_BUCKET_NAME/automysqlbackup/ /var/lib/automysqlbackup/
+  # Identify the latest backup from production
+  LATEST_BACKUP=$(sudo ls -tr /var/lib/automysqlbackup/daily/drupal_prod/*.sql* | tail -1)
+  if [[ "${LATEST_BACKUP}" != "" ]]; then
+    # Restore the backup
+    sudo gunzip -c "${LATEST_BACKUP}" | sudo mysql -u root -h 127.0.0.1
+  fi
+fi
