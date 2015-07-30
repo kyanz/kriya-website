@@ -116,11 +116,13 @@ parameters:
     type: string
     description: Amazon AWS S3 secret key
     default: disable
+    hidden: true
 
   s3_encryption_password:
     type: string
     description: S3 backup encryption password
     default: disable
+    hidden: true
 
   s3_bucket_name:
     type: string
