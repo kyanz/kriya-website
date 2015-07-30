@@ -203,7 +203,7 @@ EOF
 ) | sudo tee /home/ubuntu/.s3cfg
 
 # Secure config file
-sudo chmod 400 ~/.s3cfg
+sudo chmod 400 /home/ubuntu/.s3cfg
 
 # Set up cron job to run the backup task every day
 (cat << EOF
