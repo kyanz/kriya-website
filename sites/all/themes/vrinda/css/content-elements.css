@@ -432,19 +432,19 @@ h6 .fa.filled, h6 .fa.border, h6 .fa.circle {
   background-color: #efefef;
 }
 .info-box .left-border {
-  border-left: 3px solid #f65287;
+  border-left: 3px solid #e1701e;
 }
 .info-box .right-border {
-  border-right: 3px solid #f65287;
+  border-right: 3px solid #e1701e;
 }
 .info-box .top-border {
-  border-top: 3px solid #f65287;
+  border-top: 3px solid #e1701e;
 }
 .info-box .bottom-border {
-  border-bottom: 3px solid #f65287;
+  border-bottom: 3px solid #e1701e;
 }
 .info-box .with-border {
-  border: 3px solid #f65287;
+  border: 3px solid #e1701e;
 }
 .info-box .no-border {
   border: none;
