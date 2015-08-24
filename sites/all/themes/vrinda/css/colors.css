@@ -14,7 +14,7 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  color: #444444;
+  color: #e1701e;
 }
 a:focus , a:link, a:active {
   outline: none;
