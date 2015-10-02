@@ -139,10 +139,11 @@ sudo chown drupal.drupal /var/www/drupal/sites/default/settings.php
 sudo chmod 644 /var/www/drupal/sites/default/settings.php
 
 # If this is a new install, then perform the automated site install process
-if [[ "${DRUPAL_SOURCE}" == "drush" ]]; then
+#if [[ "${DRUPAL_SOURCE}" == "drush" ]]; then
+  # Use drush to install and configure the site
   cd /var/www/drupal
   sudo drush -y site-install standard --account-name=drupal_user --account-pass=drupal_password --db-url=mysql://db_user:db_password@db_ipaddr/db_name
-fi
+#fi
 
 # Set up Drupal's cron job to run daily
 (cat << EOF
@@ -239,4 +240,26 @@ sudo chmod +x /etc/cron.daily/drupal-backup
 # Backups will accumulate over time (sync is configured not to delete removed
 # files automatically). To clean up old backups do:
 # sudo s3cmd --config=/home/ubuntu/.s3cfg --delete-removed sync /home/drupal/drush-backups/ s3://$S3_BUCKET_NAME/automysqlbackup/
+
+###########################
+# Restore existing websites
+###########################
+
+# If we are deploying an existing codebase, we should also have a site backup
+# we may want to restore.
+if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
+  # Download latest backup from S3
+  mkdir -p /tmp/backup
+  LATEST_BACKUP=$(sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg ls s3://kyanz-backup/drush-backups/archive-dump/ | tail -1 | awk '{print $2}')
+  sudo sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /tmp/backup/
+  cd /tmp/backup
+  FILE_NAME=$(ls drupal_prod*.gz)
+  # Backup the settings.php file, so it is not overwritten by the restore
+  sudp cp -p /var/www/drupal/sites/default/settings.php /var/www/drupal/settings.bkp
+  # Restore the backup (without losing the config file)
+  sudo tar zxpvf "${FILE_NAME}"
+  sudo rm -rf /var/www/drupal/sites/*
+  sudo mv drupal/sites/* /var/www/drupal/sites/
+  sudo mv /var/www/drupal/settings.bkp /var/www/drupal/sites/default/settings.php
+fi
 
