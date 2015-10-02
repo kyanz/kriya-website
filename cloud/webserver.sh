@@ -118,12 +118,18 @@ DRUPAL_SOURCE="drupal_source"
 
 # Deploy the Drupal 7 codebase from drush or git repo
 if [[ "${DRUPAL_SOURCE}" == "drush" ]]; then
+  echo "Installing Drupal using Drush"
   drush dl drupal-7.x
   sudo mv drupal-7.x-dev /var/www/drupal
 else
+  echo "Fetching existing codebase from ${DRUPAL_SOURCE}"
   git clone ${DRUPAL_SOURCE} drupal
   sudo mv drupal /var/www/drupal
 fi
+
+# Use drush to install and configure the website
+cd /var/www/drupal
+sudo drush -y site-install standard --account-name=drupal_user --account-pass=drupal_password --db-url=mysql://db_user:db_password@db_ipaddr/db_name
 
 # Secure it with the appropriate permissions
 sudo chown -R drupal.drupal /var/www/drupal
@@ -134,16 +140,9 @@ sudo chgrp www-data /var/www/drupal/sites/default/files
 sudo chmod 775 /var/www/drupal/sites/default/files
 
 # Create a new settings file and secure it
-sudo cp /var/www/drupal/sites/default/default.settings.php /var/www/drupal/sites/default/settings.php
+#sudo cp /var/www/drupal/sites/default/default.settings.php /var/www/drupal/sites/default/settings.php
 sudo chown drupal.drupal /var/www/drupal/sites/default/settings.php
 sudo chmod 644 /var/www/drupal/sites/default/settings.php
-
-# If this is a new install, then perform the automated site install process
-#if [[ "${DRUPAL_SOURCE}" == "drush" ]]; then
-  # Use drush to install and configure the site
-  cd /var/www/drupal
-  sudo drush -y site-install standard --account-name=drupal_user --account-pass=drupal_password --db-url=mysql://db_user:db_password@db_ipaddr/db_name
-#fi
 
 # Set up Drupal's cron job to run daily
 (cat << EOF
@@ -251,15 +250,21 @@ if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
   # Download latest backup from S3
   mkdir -p /tmp/backup
   LATEST_BACKUP=$(sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg ls s3://kyanz-backup/drush-backups/archive-dump/ | tail -1 | awk '{print $2}')
-  sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /tmp/backup/
+  /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /tmp/backup/
   cd /tmp/backup
   FILE_NAME=$(ls drupal_prod*.gz)
-  # Backup the settings.php file, so it is not overwritten by the restore
-  sudo cp -p /var/www/drupal/sites/default/settings.php /tmp/settings.bkp
   # Restore the backup (without losing the config file)
-  sudo tar zxpvf "${FILE_NAME}"
-  sudo rm -rf /var/www/drupal/sites/*
-  sudo mv drupal/sites/* /var/www/drupal/sites/
-  sudo mv /tmp/settings.bkp /var/www/drupal/sites/default/settings.php
+  tar zxpvf "${FILE_NAME}"
+  rm -rf /var/www/drupal
+  mv drupal /var/www/
+  # Use drush to change existing Drupal settings
+  cd /var/www/drupal
+  drush eval '
+include DRUPAL_ROOT."/includes/install.inc";
+include DRUPAL_ROOT."/includes/update.inc";
+global $db_prefix;
+$db["databases"]["value"] = update_parse_db_url("mysql://db_user:db_password@db_ipaddr/db_name", $db_prefix);
+drupal_rewrite_settings($db, $db_prefix);
+'
 fi
 

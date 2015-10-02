@@ -228,17 +228,23 @@ sudo chmod +x /etc/cron.daily/s3sync
 # If we are deploying an existing codebase, we should also have a database
 # backup we may want to restore.
 if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
-  sudo s3cmd --config=/home/ubuntu/.s3cfg sync s3://$S3_BUCKET_NAME/automysqlbackup/ /var/lib/automysqlbackup/
   # Identify the latest backup from production
-  LATEST_BACKUP=$(sudo ls -tr /var/lib/automysqlbackup/daily/drupal_prod/*.sql* | tail -1)
-  if [[ "${LATEST_BACKUP}" != "" ]]; then
+  LATEST_BACKUP=$(/usr/bin/s3cmd --config=/home/ubuntu/.s3cfg ls s3://kyanz-backup/automysqlbackup/daily/drupal_prod/ | tail -1 | awk '{print $4}')
+  echo "Latest database backup from production is ${LATEST_BACKUP}"
+  # Download latest backup from S3
+  mkdir -p /var/lib/automysqlbackup/daily/drupal_prod/
+  /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /var/lib/automysqlbackup/daily/drupal_prod/
+  cd /var/lib/automysqlbackup/daily/drupal_prod
+  # Identify the backup file name
+  BACKUP_FILE=$(sudo ls -tr *.sql.gz | tail -1)
+  if [[ "${BACKUP_FILE}" != "" ]]; then
     # Restore the backup
-    sudo gunzip -c "${LATEST_BACKUP}"
-    DB_DUMP_FILE=$(echo "${LATEST_BACKUP}" | sed "s/.gz$//")
+    gunzip "${BACKUP_FILE}"
+    DB_DUMP_FILE=$(echo "${BACKUP_FILE}" | sed "s/.gz$//")
     # Remove database selection from dump file (so we can import in another db)
-    sudo sed -i 's/^CREATE DATABASE/-- CREATE DATABASE/' "${DB_DUMP_FILE}"
-    sudo sed -i 's/^USE /-- USE /' "${DB_DUMP_FILE}"
+    sed -i 's/^CREATE DATABASE/-- CREATE DATABASE/' "${DB_DUMP_FILE}"
+    sed -i 's/^USE /-- USE /' "${DB_DUMP_FILE}"
     # Import the database dump into existing database
-    sudo cat "${DB_DUMP_FILE}" | sudo mysql -u root -h 127.0.0.1 db_name
+    cat "${DB_DUMP_FILE}" | sudo mysql -u root -h 127.0.0.1 db_name
   fi
 fi
