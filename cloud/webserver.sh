@@ -251,11 +251,11 @@ if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
   # Download latest backup from S3
   mkdir -p /tmp/backup
   LATEST_BACKUP=$(sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg ls s3://kyanz-backup/drush-backups/archive-dump/ | tail -1 | awk '{print $2}')
-  sudo sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /tmp/backup/
+  sudo /usr/bin/s3cmd --config=/home/ubuntu/.s3cfg sync ${LATEST_BACKUP} /tmp/backup/
   cd /tmp/backup
   FILE_NAME=$(ls drupal_prod*.gz)
   # Backup the settings.php file, so it is not overwritten by the restore
-  sudp cp -p /var/www/drupal/sites/default/settings.php /var/www/drupal/settings.bkp
+  sudo cp -p /var/www/drupal/sites/default/settings.php /var/www/drupal/settings.bkp
   # Restore the backup (without losing the config file)
   sudo tar zxpvf "${FILE_NAME}"
   sudo rm -rf /var/www/drupal/sites/*
