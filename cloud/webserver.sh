@@ -255,11 +255,11 @@ if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
   cd /tmp/backup
   FILE_NAME=$(ls drupal_prod*.gz)
   # Backup the settings.php file, so it is not overwritten by the restore
-  sudo cp -p /var/www/drupal/sites/default/settings.php /var/www/drupal/settings.bkp
+  sudo cp -p /var/www/drupal/sites/default/settings.php /tmp/settings.bkp
   # Restore the backup (without losing the config file)
   sudo tar zxpvf "${FILE_NAME}"
   sudo rm -rf /var/www/drupal/sites/*
   sudo mv drupal/sites/* /var/www/drupal/sites/
-  sudo mv /var/www/drupal/settings.bkp /var/www/drupal/sites/default/settings.php
+  sudo mv /tmp/settings.bkp /var/www/drupal/sites/default/settings.php
 fi
 
