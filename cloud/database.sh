@@ -118,17 +118,15 @@ EOF
 
 DRUPAL_SOURCE="drupal_source"
 
-if [[ "${DRUPA_SOURCE}" == "drush" ]]; then
-  # Create website databases and grant DB access to corresponding drupal users
-  (cat << EOF
+# Create website databases and grant DB access to corresponding drupal users
+(cat << EOF
 use mysql
 CREATE DATABASE db_name CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES ON \`db_name\`.* TO 'db_user'@'%' IDENTIFIED BY 'db_password';
 flush privileges;
 exit
 EOF
-  ) | sudo mysql -u root -h 127.0.0.1
-fi
+) | sudo mysql -u root -h 127.0.0.1
 
 # To connect to the database from the webserver host: mysql -h ${PRIVATE_IP} -u ${USER} -p
 
@@ -227,8 +225,6 @@ sudo chmod +x /etc/cron.daily/s3sync
 # Restore existing database
 ###########################
 
-DRUPAL_SOURCE="drupal_source"
-
 # If we are deploying an existing codebase, we should also have a database
 # backup we may want to restore.
 if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
@@ -237,6 +233,12 @@ if [[ "${DRUPAL_SOURCE}" != "drush" ]]; then
   LATEST_BACKUP=$(sudo ls -tr /var/lib/automysqlbackup/daily/drupal_prod/*.sql* | tail -1)
   if [[ "${LATEST_BACKUP}" != "" ]]; then
     # Restore the backup
-    sudo gunzip -c "${LATEST_BACKUP}" | sudo mysql -u root -h 127.0.0.1
+    sudo gunzip -c "${LATEST_BACKUP}"
+    DB_DUMP_FILE=$(echo "${LATEST_BACKUP}" | sed "s/.gz$//")
+    # Remove database selection from dump file (so we can import in another db)
+    sudo sed -i 's/^CREATE DATABASE/-- CREATE DATABASE/' "${DB_DUMP_FILE}"
+    sudo sed -i 's/^USE /-- USE /' "${DB_DUMP_FILE}"
+    # Import the database dump into existing database
+    sudo cat "${DB_DUMP_FILE}" | sudo mysql -u root -h 127.0.0.1 db_name
   fi
 fi
